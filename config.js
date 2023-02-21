@@ -50,7 +50,7 @@ global.urlnya = "https://www.instagram.com/sahrulwara_____"
 
 //============= callButtons ============//
 global.dtc = '𝒄𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
-global.phn = '+6285822347348'
+global.phn = '+6283137221973'
 
 //========== Tampilan Bot =============//
 global.sa = '╭─'
