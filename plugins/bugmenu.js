@@ -174,19 +174,7 @@ handler.botAdmin = false
 handler.fail = null
 handler.exp = 3
 
-module.exports = handler
 
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
-
-function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-}
-
-let fetch = require('node-fetch')
 let handler = async (m, { conn, text, usedPrefix }) => {
   if (!text) throw `Contoh Penggunaan\n${usedPrefix}spamcall 628xxxxxxxx`
   let nomor = text.replace(/[^0-9]/gi, '').slice(2)
@@ -200,8 +188,20 @@ handler.help = ['spamcall <nomor>']
 handler.tags = ['bugmenu']
 handler.command = /^(spamcall)$/i
 handler.limit = true
-handler.premium  
+handler.premium = true
 
+module.exports = handler
+
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
