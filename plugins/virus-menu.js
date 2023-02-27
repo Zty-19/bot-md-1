@@ -162,7 +162,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   }
 }
 handler.help = ['virtex']
-handler.tags = ['premium']
+handler.tags = ['bugmenu']
 handler.command = /^(virtex|virus)$/i
 handler.owner = true
 handler.mods = false
