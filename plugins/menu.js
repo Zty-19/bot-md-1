@@ -45,7 +45,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'UTAMA',
-    'menuAzky': 'Bugmenu',
+    'bugmenu': 'Bugmenu',
     'game': 'Game',
     'rpg': 'RPG',
     'xp': 'Exp & Limit',
@@ -72,8 +72,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'game') tags = {
     'game': 'Game'
   }
-  if (teks == 'menuAzky') tags = {
-    'menuAzky': 'Bugmenu'
+  if (teks == 'bugmenu') tags = {
+    'bugmenu': 'Bugmenu'
   }
   if (teks == 'xp') tags = {
     'xp': 'Exp & Limit'
@@ -230,7 +230,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         rows: [
           { title: 'Semua Perintah', rowId: `${_p + command} all` },
           { title: 'Game', rowId: `${_p + command} game` },
-          { title: 'Bugmenu', rowId: `${_p + command} menuAzky` },
+          { title: 'Bugmenu', rowId: `${_p + command} bugmenu` },
           { title: 'Rpg', rowId: `${_p + command} rpg` },
           { title: 'XP', rowId: `${_p + command} xp` },
           { title: 'Stiker', rowId: `${_p + command} stiker` },
