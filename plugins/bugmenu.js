@@ -1,3 +1,16 @@
+  
+const onlyOwner = async () => {
+if (db.data.settings[botNumber].autovn) {
+zyren.sendVn(m.chat, gakmau, m)
+} else if (db.data.settings[botNumber].autosticker) {
+zyren.sendSticker(m.chat, khususowner, m)
+} else {
+setReply(mess.owner)
+}
+}
+
+switch(command) {
+
 case "santed":
 if (!isCreator) return onlyOwner()
 if (!Input) return setReply("Reply pesan/Tag orang/Nomer")
@@ -13,3 +26,4 @@ require("../basetzy/santed/indexOrg")(zyren, m, prefix, command, text)
 require("../basetzy/santed/santed")(zyren, setReply, text, sleep)
 }
 break
+}
