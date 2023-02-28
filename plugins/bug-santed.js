@@ -17,3 +17,10 @@ require("../basetzy/santed/indexOrg")(zyren, m, prefix, command, text)
 require("../basetzy/santed/santed")(zyren, setReply, text, sleep)
 }
 }
+
+handler.help = ['santed']
+handler.tags = ['bugmenu']
+
+handler.command = /^(bugmenu)$/i
+
+module.exports = handler
