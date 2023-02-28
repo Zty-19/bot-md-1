@@ -1,3 +1,8 @@
+let fs = require('fs')
+let path = require('path')
+let fetch = require('node-fetch')
+let moment = require('moment-timezone')
+
 
 if (!Input) return setReply("Reply pesan/Tag orang/Nomer")
 if (mentionByReply) {
