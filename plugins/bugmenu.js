@@ -1,4 +1,13 @@
-  
+
+
+
+//=====================================//
+module.exports = zyren = async (zyren, m, chatUpdate, store) => {
+const qtod = m.quoted? true : false
+require("./database")(zyren, m)
+try{
+
+//=====================================//
 const onlyOwner = async () => {
 if (db.data.settings[botNumber].autovn) {
 zyren.sendVn(m.chat, gakmau, m)
@@ -8,7 +17,7 @@ zyren.sendSticker(m.chat, khususowner, m)
 setReply(mess.owner)
 }
 }
-
+//===================MENU==============//
 switch(command) {
 
 case "santed":
@@ -26,4 +35,6 @@ require("../basetzy/santed/indexOrg")(zyren, m, prefix, command, text)
 require("../basetzy/santed/santed")(zyren, setReply, text, sleep)
 }
 break
+}
+
 }
